@@ -46,7 +46,7 @@ def predict():
     recommendations = model.kneighbors([predictor])[1][0]
     
     # send back to browser
-    output = {'results': str(y.iloc[recommendations][:2])}
+    output = {'results': str(y.iloc[recommendations][:10])}
 
     # return data
     return jsonify(results=output)
