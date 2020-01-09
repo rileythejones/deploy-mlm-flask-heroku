@@ -1,0 +1,24 @@
+<!-- Comment here, this is our base template -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>  {{ title }} </title>
+    <!-- add in a stylesheet from picnicss.com -->
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
+  </head>
+
+  <body>
+    <h1> Header </h1>
+  <article class="flex two" style="padding: 3em 1em;">
+
+  {% block content %}
+  <form action="/user" method="post">
+    <input type="text" name="user_name" placeholder="User to add">
+    <input type="submit" value="Add User">
+  </form>
+  {% endblock %}
+  
+  </body>
+
+</html>
