@@ -42,7 +42,7 @@ my_model = create_model(preprocess(X))
 @app.route('/pred', methods=['GET'])
 def returnAll():
     song_dict = {"artist_name":"YG","track_id":"2RM4jf1Xa9zPgMGRDiht8O","track_name":"Big Bank feat. 2 Chainz, Big Sean, Nicki Minaj","acousticness":0.00582,"danceability":0.743,"duration_ms":238373,"energy":0.339,"instrumentalness":0.0,"key":1,"liveness":0.0812,"loudness":-7.678,"mode":1,"speechiness":0.409,"tempo":203.927,"time_signature":4,"valence":0.118,"popularity":15}
-    song_dict.update((x, [y]) for x, y in derp_dict.items())
+    song_dict.update((x, [y]) for x, y in song_dict.items())
     song_df = pd.DataFrame.from_dict(song_dict)
     song_df = song_df[song_df.columns[3:]]
 
