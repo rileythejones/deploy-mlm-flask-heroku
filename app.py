@@ -6,8 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 
 app = Flask(__name__)
 
-infile = "https://raw.githubusercontent.com/Tclack88/Machine-Learning-Projects/master/SpotifyAudioFeaturesApril2019.csv"
-songs_df = pd.read_csv(infile)
+songs_df = pd.read_csv('SpotifyAudioFeaturesApril2019.csv')
 
 y = songs_df[songs_df.columns[:3]]
 X = songs_df[songs_df.columns[3:]]
